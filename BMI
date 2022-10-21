@@ -6,3 +6,7 @@ def BMI_Calculator(weight, height):
         print("Twoje BMI jest odpowiednie")
     else:
         print("Twoje BMI jest zbyt wysokie")
+        
+w, h = input("Enter your weight [kg] and height[m]: ").split()
+BMI_Calculator(float(w), float(h))
+
