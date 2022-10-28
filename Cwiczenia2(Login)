@@ -1,0 +1,7 @@
+def login():
+    name, surname = input("Enter your name and surname: ").split()
+    return name[0] + surname[0] + str(len(name)) + str(len(surname))
+
+
+print(login())
+
