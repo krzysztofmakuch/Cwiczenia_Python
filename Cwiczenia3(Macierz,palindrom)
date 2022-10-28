@@ -1,0 +1,23 @@
+def matrix_multiplication(matrix1, matrix2):
+    matrix_size = len(matrix1[0])
+    product_matrix = [[0]*matrix_size for i in range(matrix_size)]
+    for i in range(matrix_size):
+        for j in range(matrix_size):
+            for r in range(matrix_size):
+                product_matrix[i][j] += matrix1[i][r] * matrix2[r][j]
+
+    return product_matrix
+
+matrix1 = [
+            [-1, -2, -3],
+            [0, 2, -1],
+            [-1, 3, 0]
+          ]
+
+matrix2 = [
+            [1, 5, 1],
+            [2, 1, 2],
+            [3, 2, 3]
+          ]
+
+print(matrix_multiplication(matrix1, matrix2))
