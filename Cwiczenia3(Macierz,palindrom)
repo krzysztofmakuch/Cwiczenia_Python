@@ -21,3 +21,7 @@ matrix2 = [
           ]
 
 print(matrix_multiplication(matrix1, matrix2))
+
+
+def is_palindrom(string):
+    return False not in [string[-i-1] == string[i] for i in range(0, len(string)//2+1)]
