@@ -17,7 +17,7 @@ for name in students_name:
 codons = ["ATCGGGCAT", "ATCGA", "TTTGCGA"]
 
 def KodonyzDelecja(cod):
-    return [seq for seq in filter(lambda s: len(s) % 3 != 0, cod)]
+    return list(filter(lambda s: len(s) % 3 != 0, cod))
 
 print(KodonyzDelecja(codons))
 
