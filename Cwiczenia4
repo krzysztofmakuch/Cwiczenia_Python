@@ -1,0 +1,30 @@
+#####################    ZADANIE 1    #######################
+
+results = [['Ania', 2], ['Michal', 3], ['Romek', 3], ['Tysia', 1], ['Karol', 2], ['Ada', 1]]
+
+second_low = 0
+results.sort(key=lambda x: x[1])
+for i in range(len(results)):
+    if results[i][1] != results[0][1]:
+        second_low = results[i][1]
+        break
+students_name = [n[0] for n in results if n[1] == second_low]
+for name in students_name:
+    print(name)
+    
+#####################    ZADANIE 2    #######################
+
+codons = ["ATCGGGCAT", "ATCGA", "TTTGCGA"]
+
+def KodonyzDelecja(cod):
+    return [seq for seq in filter(lambda s: len(s) % 3 != 0, cod)]
+
+print(KodonyzDelecja(codons))
+
+#####################    ZADANIE 3    #######################
+
+s = "UGAGGUAGUAGGUUUUUUUUUU, UGAGGUAGUAGGUUGAUUUUUU, UGAGGUAGUAGGUUGUUUUUUU, UGAGGUAGUAGGUUGUGAUUUU, UGAGGUAGUAGGUUGUAUGGUU"
+
+seq_list = list(s.split(", "))
+print(sorted(seq_list, key=lambda seq: -seq.count('U')))
+
