@@ -1,0 +1,38 @@
+##################### ZADANIE 1 #####################
+
+choice = 1
+lista = []
+while choice != 0:
+    try:
+        choice = int(input("Podaj liczbe calkowita dodatnia: "))
+        if choice <= 0:
+            raise ValueError
+    except ValueError:
+        print("Nie podawaj liczby slownie!")
+        continue
+    lista.append(choice)
+    print(lista)
+
+##################### ZADANIE 2 #####################
+
+def czyWypozyczone(title = 'Potop',**kwargs):
+    ''' Funkcja zwraca w postaci listy użytkowników (ID),
+    którzy wypożyczyli 'Potop'.
+    >>> czyWypozyczone(id1=['Potop', 'Pan Tadeusz'], id2=['Ferdydurke'])
+    [id1]
+    >>> czyWypozyczone(id1=['Potop', 'Pan Tadeusz'], id2=['Ferdydurke'], id3=['Zbrodnia i kara', 'Potop', 'Harry Potter'])
+    [id1, id3]
+    '''
+    listaId = []
+    for key, value in kwargs.items():
+        if title in value:
+            listaId.append(key)
+
+
+    return listaId
+    
+print(czyWypozyczone(title = 'Zbrodnia i kara', id1=['Potop', 'Pan Tadeusz'], id2=['Ferdydurke','Zbrodnia i kara'], id3=['Zbrodnia i kara', 'Potop', 'Harry Potter']))
+
+##################### ZADANIE 3 #####################
+
+Dodam troszkę później
