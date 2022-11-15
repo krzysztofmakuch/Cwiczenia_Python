@@ -33,6 +33,26 @@ def czyWypozyczone(title = 'Potop',**kwargs):
     
 print(czyWypozyczone(title = 'Zbrodnia i kara', id1=['Potop', 'Pan Tadeusz'], id2=['Ferdydurke','Zbrodnia i kara'], id3=['Zbrodnia i kara', 'Potop', 'Harry Potter']))
 
-##################### ZADANIE 3 #####################
+##################### REGEX #####################
+##################### ZADANIE 6 #####################
 
-Dodam troszkę później
+s = "ATTTGgccTaC"
+pattern = r'[a-z]'
+only_uppercase = re.sub(pattern, '', s)
+print(only_uppercase)
+
+##################### ZADANIE 7 #####################
+
+s2 = "ala ma kota: ala@interia.pl ola hahaha@wp.pl grzes nie ma pk81@gmail.com"
+mails = re.findall(r'\w+@\w+\.\w+', s2, re.DOTALL)
+print(mails)
+
+##################### ZADANIE 8 #####################
+
+L = ["Adam Nowak", "Kasia Klimczak", "Maria Rudzik"]
+
+for name in L:
+    my_regex = r"\s" + re.escape(name[0])
+    print("TAK") if re.search(my_regex, name) else print("NIE")
+
+
