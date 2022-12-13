@@ -1,1 +1,16 @@
 
+######################################### ZADANIE 4 ##############################################
+
+s = 'aldaAS dsADWF ADSshtKK. Gdwygh GIRT. fvrgoij muewrsd we. EEE.'
+
+s2 = (re.sub(r"(\. )([A-Za-z])([A-Za-z' ']*)", lambda x: x.group(1) + x.group(2).upper() + x.group(3).lower(), s))
+print(re.sub(r"(^.)([A-Za-z' ']*)", lambda x: x.group(1).upper() + x.group(2).lower(), s2))
+
+
+
+
+######################################### ZADANIE 5 ##############################################
+
+date = "2022-12-11"
+changed_date = re.sub("([0-9]{4})(-[0-9]{2})(-[0-9]{2})", lambda x: x.group(3)[1:] + x.group(2) + "-" + x.group(1), date)
+print(changed_date)
