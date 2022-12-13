@@ -1,0 +1,44 @@
+################################ ZADANIE (sys) ################################ 
+
+
+################################ ZADANIE (wiek) ################################ 
+
+birth_date_list = input("Enter your birth date in format dd-mm-yyyy: ").split("-")
+day, month, year = [int(item) for item in birth_date_list]
+
+birth_date = date(year, month, day)
+current_time = date.today()
+
+diff = relativedelta.relativedelta(current_time, birth_date)
+
+years = diff.years
+months = diff.months
+days = diff.days
+
+print('Upłynęło {} lat {} miesiecy oraz {} dni'.format(years, months, days))
+
+################################ ZADANIE (walec) ################################ 
+
+class Cylinder:
+    def __init__(self, radius, height):
+        self.r = radius
+        self.h = height
+
+    def get_base_area(self):
+        return math.pi*(self.r**2)
+
+    def get_side_area(self):
+        return 2*math.pi*self.r*self.h
+
+    def get_volume(self):
+        return self.get_base_area() * self.h
+
+    def longest_stick(self):
+        return math.sqrt((2*self.r)**2 + self.h**2)
+
+# example:
+cyl = Cylinder(3, 8)
+print(cyl.get_base_area())
+print(cyl.get_side_area())
+print(cyl.get_volume())
+print(cyl.longest_stick())
