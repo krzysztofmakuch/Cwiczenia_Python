@@ -54,5 +54,4 @@ L = ["Adam Nowak", "Kasia Klimczak", "Maria Rudzik"]
 for name in L:
     my_regex = r"\s" + re.escape(name[0])
     print("TAK") if re.search(my_regex, name) else print("NIE")
-
-
+#ale to miało zwracać imiona i nazwiska jeżeli zaczynają się od tej samej litery, a nie 'NIE', 'TAK'
